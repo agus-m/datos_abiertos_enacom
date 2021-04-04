@@ -141,3 +141,5 @@ https://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/LISTA-DE-SENAL-DISTI-
 y dentro de ese archivo json parece haber un path en endpoint que hace referencia al archivo original que se genero internamente como csv con los datos que eligieron pubicar,
 por ejemplo https://enacom.gob.ar/public/enacom/datosabiertos/Autorizacion_Especiales_20171009160930.CSV
 
+El mejor resultado que consegui hasta ahora es tomando el guid del json resources y poniendo ese valor en el loop recorriendo la carpeta datastreams https://api.datosabiertos.enacom.gob.ar/api/v2/resources/?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG
+
