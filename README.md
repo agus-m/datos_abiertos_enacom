@@ -5,7 +5,7 @@ El objetivo de este proyecto es armar un proceso automático de descarga de data
 El código fue desarrollado en python y consta de dos etapas 
 
 1) La primera etapa consiste en la descarga de una serie de archivos Json disponibles a traves de la API. 
-La ubicación de los archivos es http://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/ y la lisa de archivos disponibles está en 
+La ubicación de los archivos es http://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/ y la lista de archivos disponibles está en 
 http://api.datosabiertos.enacom.gob.ar/api/v2/resources.json/?auth_key= (Auth_Key)
 
 La Auth_Key se genera en https://datosabiertos.enacom.gob.ar/developers/
