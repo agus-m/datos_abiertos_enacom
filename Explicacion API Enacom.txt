@@ -1,0 +1,139 @@
+
+Pasos para entender la api de enacom
+
+1) Entramos a https://datosabiertos.enacom.gob.ar/home y vemos la lista de datos disponibles y diferentes formas de filtrarlos y organizarlos
+
+2) Si hacemos click en cualquiera de los datos disponibles vamos a la pagina que muestra esa grilla, 
+por ejemplo https://datosabiertos.enacom.gob.ar/dataviews/246899/reclamos-de-usuarios-de-servicios-postales-por-operador/
+
+En el costado izquierdo de las paginas que muestran los datos hay una barra con varias opciones.
+Por ejemplo filtrar, exportar, ordenar, etc. Una de esas opciones dice API y explica como funciona la api/desarrolladores y da ejemplos de solicitudes, este es uno:
+http://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/RECLA-DE-USUAR-DE-SERVI/data.json/?auth_key=YOUR_API_KEY&limit=50
+
+3) Para poder tirar requests a la api primero hay que conseguir una key, este es un ejemplo de una key generada 
+
+?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG
+
+4) Desde este punto podemos empezar a investigar toda la informacion que tienen publicada entrando a cada carpeta y automatizando la descarga de los archivos en el formato que
+necesitemos. En este caso vamos a trabajar siempre con el formato json.
+
+Por ejemplo, podemos ver toda la informacion que exponen dos carpetas arriba de la del ejemplo
+
+http://api.datosabiertos.enacom.gob.ar/api/v2/?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG
+
+y vemos que la respuesta tiene la siguiente informacion en formato json.
+
+Django REST framework
+
+AnonymousUser
+
+Api Root
+
+GET /api/v2/?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json ;utf-8
+Vary: Accept
+
+{
+    "resources": "http://api.datosabiertos.enacom.gob.ar/api/v2/resources/",
+    "datastreams": "http://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/",
+    "datasets": "http://api.datosabiertos.enacom.gob.ar/api/v2/datasets/",
+    "visualizations": "http://api.datosabiertos.enacom.gob.ar/api/v2/visualizations/",
+    "sources": "http://api.datosabiertos.enacom.gob.ar/api/v2/sources/",
+    "tags": "http://api.datosabiertos.enacom.gob.ar/api/v2/tags/",
+    "categories": "http://api.datosabiertos.enacom.gob.ar/api/v2/categories/",
+    "stats": "http://api.datosabiertos.enacom.gob.ar/api/v2/stats/",
+    "account/resources": "http://api.datosabiertos.enacom.gob.ar/api/v2/account/resources/",
+    "account/children": "http://api.datosabiertos.enacom.gob.ar/api/v2/account/children/",
+    "dashboards": "http://api.datosabiertos.enacom.gob.ar/api/v2/dashboards/",
+    "iot": "http://api.datosabiertos.enacom.gob.ar/api/v2/iot/"
+}
+
+El nombre Django nos da información sobre el framework en que se desarrolló la api, evidentemente en python.
+
+5) Podemos indagar un poco mas en detalle el contenido de la carpeta datasets, copio una parte del json que devuelve porque es muy grande, pero entiendo que al comenzar 
+con un corchete y despues separar cada objeto con llaves representa una lista de diccionarios, que entiendo es la forma stardard de maniputar los datos json desde python.
+
+http://api.datosabiertos.enacom.gob.ar/api/v2/datasets/?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG
+
+Django REST framework
+
+AnonymousUser
+
+Api Root Data Set List
+
+Data Set List
+GET /api/v2/datasets/?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG
+HTTP 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Type: application/json ;utf-8
+Vary: Accept
+
+[
+    {
+        "result": null,
+        "status": null,
+        "endpoint": "file://15121/37231/328210302950195216434642517668415212699",
+        "description": "Número de altas y bajas mensuales de la portabilidad numérica móvil por operador",
+        "parameters": [],
+        "tags": [
+            "telefonia movil",
+            "portabilidad"
+        ],
+        "last_revision_id": null,
+        "timestamp": 1615487855000,
+        "created_at": 1615487843,
+        "title": "Portabilidad numérica móvil por operador",
+        "modified_at": 1615487855,
+        "category_id": "83730",
+        "methods": null,
+        "sources": [],
+        "total_revisions": null,
+        "frequency": "monthly",
+        "link": "http://datosabiertos.enacom.gob.ar/datasets/176156/portabilidad-numerica-movil-por-operador/",
+        "user": "rpereiro",
+        "status_str": null,
+        "guid": "PORTA-NUMER-MOVIL-POR-OPERA",
+        "category_name": "Telefonía móvil"
+    },
+    {
+        "result": null,
+        "status": null,
+        "endpoint": "file://15121/37231/146287495914065577327097404978158609531",
+        "description": "Radiobases reportadas por los operadores en cumplimiento de la Resolución CNC 1494 de 2015",
+        "parameters": [],
+        "tags": [
+            "telefonia movil",
+            "4g",
+            "provincial"
+        ],
+        "last_revision_id": null,
+        "timestamp": 1608782192000,
+        "created_at": 1608782179,
+        "title": "Despliegue de radiobases 4G",
+        "modified_at": 1608782192,
+        "category_id": "83730",
+        "methods": null,
+        "sources": [],
+        "total_revisions": null,
+        "frequency": "quarterly",
+        "link": "http://datosabiertos.enacom.gob.ar/datasets/176412/despliegue-de-radiobases-4g/",
+        "user": "rpereiro",
+        "status_str": null,
+        "guid": "DESPL-DE-RADIO-4G",
+        "category_name": "Telefonía móvil"
+    }
+]
+
+6) El próximo paso sería formatear este archivo json para que tenga estructura de tabla y poder ver y exportar a excel una lista de todos los datasets disponibles indicando la fecha
+de creación y última fecha de modificación.
+Para avanzar con esto tengo una duda, no entiendo el formato de estas fechas.
+
+        "created_at": 1615487843,
+        "modified_at": 1615487855
+
+
+7) El paso siguiente sería armar un proceso que recorra todo este archivo json y baje automaticamente todos los datasets. Para este paso también tengo una duda.
+Debería armar un loop que genere links con una parte fija y una variable que recorra todos los diferentes guid, o es mejor que usar el valor que figura en endpoint?
+
