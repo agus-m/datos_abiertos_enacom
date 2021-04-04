@@ -136,4 +136,8 @@ Para avanzar con esto tengo una duda, no entiendo el formato de estas fechas.
 
 7) El paso siguiente sería armar un proceso que recorra todo este archivo json y baje automaticamente todos los datasets. Para este paso también tengo una duda.
 Debería armar un loop que genere links con una parte fija y una variable que recorra todos los diferentes guid, o es mejor que usar el valor que figura en endpoint?
+Pareceria que la carpeta donde figuran todos los archivos con el guid como nombre de archivo es en datastreams, por ejemplo:
+https://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/LISTA-DE-SENAL-DISTI-ESPEC/data.json/?auth_key=4LCCusejgmERsPHeTDPIb1nPGeTW74ZktP0TZaQG&limit=50&
+y dentro de ese archivo json parece haber un path en endpoint que hace referencia al archivo original que se genero internamente como csv con los datos que eligieron pubicar,
+por ejemplo https://enacom.gob.ar/public/enacom/datosabiertos/Autorizacion_Especiales_20171009160930.CSV
 
