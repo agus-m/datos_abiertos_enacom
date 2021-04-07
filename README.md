@@ -22,6 +22,7 @@ El codigo para la descarga automática de todos los recursos disponibles a una c
 
 Los requerimientos para esta etapa consisten exclusivamente en el uso de python 3.x y la librería pandas para crear dataframes.
 
+
 2) La segunda etapa consiste en armar reportes para control de la frecuencia con la que se actualizan los datasets y la fecha en la que fueron actualizados por última vez.
 
 Esta parte se encuentra en el archivo xxxxxx.py
