@@ -6,7 +6,7 @@ El código fue desarrollado en python y consta de dos etapas
 
 1) La primera etapa consiste en la descarga de una serie de archivos Json disponibles a traves de la API. 
 
-La API fue desarrollada por la empresa JUNAR y pueden encontrar la documentación en el siguiente link https://junar.github.io/docs/es/_sections/01-index.html
+La API fue desarrollada por la empresa JUNAR y pueden encontrar la documentación en el siguiente link https://junar.github.io/docs/es/_sections/01-index.html.
 
 Podemos consumir la metadata de los recursos de tipo dataset, visualizations, datastreams y dashboards través de una llamada GET. 
 Las llamadas GET nos pueden traer una lista completa de todos los conjuntos de datos o solo de un GUID específico. 
