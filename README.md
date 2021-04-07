@@ -1,4 +1,4 @@
-# Datos abiertos del ente nacional de Comunicaciones (Enacom)
+# Datos abiertos del ente nacional de Comunicaciones de la República Argentina (Enacom)
 
 El objetivo de este proyecto es armar un proceso automático de descarga de datasets utilizando la API de Enacom y la generación de reportes utilizando los datos disponibles.
 
