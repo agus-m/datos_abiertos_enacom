@@ -10,7 +10,7 @@ La API fue desarrollada por la empresa JUNAR y pueden encontrar la documentació
 Podemos consumir la metadata de los recursos de tipo dataset, visualizations, datastreams y dashboards través de una llamada GET. 
 Las llamadas GET nos pueden traer una lista completa de todos los conjuntos de datos o solo de un GUID específico. 
 
-Podemos acceder a la metadata de todos los tipos de recursos disponibles en la siguiente dirección https://api.datosabiertos.enacom.gob.ar/api/v2/?auth_key=(Auth_Key), y para consultar y descargar los recursos de cada tipo se puede recorrer la lista de GUID correspondiente.
+Podemos acceder a la metadata de todos los tipos de recursos disponibles en la siguiente dirección https://api.datosabiertos.enacom.gob.ar/api/v2/?auth_key=(Auth_Key), y para consultar y descargar los recursos de cada tipo se puede recorrer la lista de GUID correspondiente, introduciendo el valor del GUID en una variable.
 
 La Auth_Key se genera en https://datosabiertos.enacom.gob.ar/developers/
 
