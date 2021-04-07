@@ -17,7 +17,7 @@ La Auth_Key se genera en https://datosabiertos.enacom.gob.ar/developers/
 
 Por ejemplo la lista de recursos se puede obtener de http://api.datosabiertos.enacom.gob.ar/api/v2/resources.json/?auth_key=(Auth_Key) y la ubicación de las visualizaciones datastreams en http://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/?auth_key=(Auth_Key). Para descargar automáticamente todos los archivos json se puede automatizar un proceso llamando a cada GUID de la siguiente manera  http://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/{guid}/data.{format}/?auth_key=(Auth_Key)  
 
-El codigo para la descarga se encuentra en el archivo Request_Enacom_Json.py 
+El codigo para la descarga automática de todos los recursos disponibles a una carpeta local se encuentra en el archivo Request_Enacom_Json.py 
 
 2) La segunda etapa consiste en armar reportes para control de la frecuencia con la que se actualizan los datasets y la fecha en la que fueron actualizados por última vez.
 
