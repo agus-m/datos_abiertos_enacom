@@ -6,7 +6,7 @@ import datetime
 
 # Parámetros y urls para acceder a las listas de recursos disponibles
 
-auth_key = "A6xbR3TrMZW6ivfxJmAzo5QMGbxLLUYjLPatSzr4"
+auth_key = "xxxxxxxxxxxxxxxxxxxxx"
 
 url_resources = 'http://api.datosabiertos.enacom.gob.ar/api/v2/resources.json/?auth_key={clave}'.format(clave=auth_key)
 url_datastream = 'https://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/?auth_key={clave}'.format(clave=auth_key)
@@ -61,19 +61,19 @@ df_dashboards['yearmonthday'] = pd.DatetimeIndex(df_dashboards['modified_at']).y
 
 Current_Date_Formatted = datetime.datetime.today().strftime ('%Y%m%d')
 
-csv_path_resouces = r'C:/Users/agus3/Desktop/Python/Enacom/Json/resources' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dstream = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datastreams' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dsets = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datasets' + '_' + Current_Date_Formatted + '.csv'
-csv_path_visualizations = r'C:/Users/agus3/Desktop/Python/Enacom/Json/visualizations' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dashboards = r'C:/Users/agus3/Desktop/Python/Enacom/Json/dashboards' + '_' + Current_Date_Formatted + '.csv'
+csv_path_resouces = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/resources' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dstream = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datastreams' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dsets = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datasets' + '_' + Current_Date_Formatted + '.csv'
+csv_path_visualizations = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/visualizations' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dashboards = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/dashboards' + '_' + Current_Date_Formatted + '.csv'
 
-csv_path_resouces_cant = r'C:/Users/agus3/Desktop/Python/Enacom/Json/resources_cant' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dstream_cant = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datastreams_cant' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dsets_cant = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datasets_cant' + '_' + Current_Date_Formatted + '.csv'
-csv_path_visualizations_cant = r'C:/Users/agus3/Desktop/Python/Enacom/Json/visualizations_cant' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dashboards_cant = r'C:/Users/agus3/Desktop/Python/Enacom/Json/dashboards_cant' + '_' + Current_Date_Formatted + '.csv'
+csv_path_resouces_cant = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/resources_cant' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dstream_cant = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datastreams_cant' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dsets_cant = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datasets_cant' + '_' + Current_Date_Formatted + '.csv'
+csv_path_visualizations_cant = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/visualizations_cant' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dashboards_cant = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/dashboards_cant' + '_' + Current_Date_Formatted + '.csv'
 
-csv_path_dsets_cant_category = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datasets_cant_category' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dsets_cant_category = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datasets_cant_category' + '_' + Current_Date_Formatted + '.csv'
 
 # Creo los reportes para contar la cantidad de actualizados por mes
 
