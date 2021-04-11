@@ -7,7 +7,7 @@ El código fue desarrollado en python y consta de tres etapas:
 1) En la primera genera unos reportes indicando la cantidad y el grado de actualización de los datasets utilizando la API de Enacom, que fue publicada en base a los desarrollos
 de la empresa JUNAR en Django Rest Framework. La documentación está disponible en el siguiente link https://junar.github.io/docs/es/_sections/01-index.html.
 
-Consultando la API de Enacom podemos consumir la metadata de los recursos de tipo dataset, visualizations, datastreams y dashboards través de una llamada GET. 
+Consultando la API de Enacom podemos consumir la metadata de los recursos de tipo dataset, visualizations, datastreams y dashboards a través de una llamada GET. 
 Las llamadas GET nos pueden traer una lista completa de todos los conjuntos de datos o solo de un GUID específico. 
 
 Podemos acceder a la metadata de todos los tipos de recursos disponibles en la siguiente dirección https://api.datosabiertos.enacom.gob.ar/api/v2/?auth_key=(Auth_Key), y para consultar y descargar los recursos de cada tipo se puede recorrer la lista de GUID correspondiente, introduciendo el valor del GUID en una variable.
