@@ -4,7 +4,7 @@ El objetivo de este proyecto es armar un proceso automático que realice un aná
 
 El código fue desarrollado en python y consta de tres etapas: 
 
-1) En la primera genera unos reportes indicando la calidad y el grado de actualización de los datasets utilizando la API de Enacom, que fue publicada en base a los desarrollos
+1) En la primera genera unos reportes indicando la cantidad y el grado de actualización de los datasets utilizando la API de Enacom, que fue publicada en base a los desarrollos
 de la empresa JUNAR en Django Rest Framework. La la documentación está disponible en el siguiente link https://junar.github.io/docs/es/_sections/01-index.html.
 
 Consultando la API de Enacom podemos consumir la metadata de los recursos de tipo dataset, visualizations, datastreams y dashboards través de una llamada GET. 
