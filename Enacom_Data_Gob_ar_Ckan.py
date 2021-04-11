@@ -40,7 +40,7 @@ for archivo in enacom_datasets:
     # creo un dataframe con la informacion del json que devuelve DataGobAr para el recurso seleccionado y lo exporto a csv
 
     df_package = pd.read_json(package_information_url)
-    path_DataGobAr = r'C:/Users/agus3/Desktop/Python/Enacom/DataGobAr/Metadatos_por_archivo/{file}_DataGobAr{formato}'.format(file=archivo,formato='.csv')
+    path_DataGobAr = r'C:/Users/xxxxx/Desktop/Python/Enacom/DataGobAr/Metadatos_por_archivo/{file}_DataGobAr{formato}'.format(file=archivo,formato='.csv')
     df_package.to_csv(path_DataGobAr)
 
     # Make the HTTP request
@@ -55,9 +55,9 @@ for archivo in enacom_datasets:
 
     # Exportamos los datos de result para ver los metadatos de cada dataset
 
-    path_DataGobAr_result = r'C:/Users/agus3/Desktop/Python/Enacom/DataGobAr/Metadatos_por_archivo/{file}_DataGobAr_Res{formato}'.format(file=archivo,formato='.csv')
+    path_DataGobAr_result = r'C:/Users/xxxxx/Desktop/Python/Enacom/DataGobAr/Metadatos_por_archivo/{file}_DataGobAr_Res{formato}'.format(file=archivo,formato='.csv')
 
-    with open(path_DataGobAr_result, 'w') as f:  # You will need 'wb' mode in Python 2.x
+    with open(path_DataGobAr_result, 'w') as f: 
         w = csv.DictWriter(f, package_dict.keys())
         w.writeheader()
         w.writerow(package_dict)
@@ -87,6 +87,6 @@ for archivo in enacom_datasets:
 
 df_archivos_enacom_Data_Gob_ar = pd.DataFrame(Lst_archivos_enacom_Data_Gob_ar,columns=['Dataset_id','file_name','notes','title','res_name','last_mod','url','access','description','format'])
 
-path_res_lista_datasets = r'C:/Users/agus3/Desktop/Python/Enacom/DataGobAr/Metadatos_por_archivo/Lista_Datasets_Enacom_DataGobAr_Res{formato}'.format(formato='.csv')
+path_res_lista_datasets = r'C:/Users/xxxxx/Desktop/Python/Enacom/DataGobAr/Metadatos_por_archivo/Lista_Datasets_Enacom_DataGobAr_Res{formato}'.format(formato='.csv')
 
 df_archivos_enacom_Data_Gob_ar.to_csv(path_res_lista_datasets)
