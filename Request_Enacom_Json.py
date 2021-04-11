@@ -8,7 +8,7 @@ import datetime
 
 # Parámetros de la url para acceder a las listas de recursos disponibles
 
-auth_key = "A6xbR3TrMZW6ivfxJmAzo5QMGbxLLUYjLPatSzr4"
+auth_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 url_resources = 'http://api.datosabiertos.enacom.gob.ar/api/v2/resources.json/?auth_key={clave}'.format(clave=auth_key)
 url_datastream = 'https://api.datosabiertos.enacom.gob.ar/api/v2/datastreams/?auth_key={clave}'.format(clave=auth_key)
 url_datasets = 'http://api.datosabiertos.enacom.gob.ar/api/v2/datasets.json/?auth_key={clave}'.format(clave=auth_key)
@@ -53,10 +53,10 @@ df_dsets['yearmonthday'] = pd.DatetimeIndex(df_dsets['modified_at']).year * 1000
 
 Current_Date_Formatted = datetime.datetime.today().strftime ('%Y%m%d')
 
-csv_path_resouces = r'C:/Users/agus3/Desktop/Python/Enacom/Json/resources' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dstream = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datastreams' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dsets = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datasets' + '_' + Current_Date_Formatted + '.csv'
-csv_path_dsets_cant = r'C:/Users/agus3/Desktop/Python/Enacom/Json/datasets_cant' + '_' + Current_Date_Formatted + '.csv'
+csv_path_resouces = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/resources' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dstream = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datastreams' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dsets = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datasets' + '_' + Current_Date_Formatted + '.csv'
+csv_path_dsets_cant = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/datasets_cant' + '_' + Current_Date_Formatted + '.csv'
 
 # Creo los reportes para contar la cantidad de actualizados por mes
 
@@ -88,6 +88,6 @@ for i in range(len(guid_list)):
     headers = {"User-Agent": "Mozilla/5.0"}
     respuesta_ds = requests.get(url_bucle, headers=headers).json()
     archivo = guid_list[i] + '.json'
-    path = r'C:/Users/agus3/Desktop/Python/Enacom/Json/' + archivo
+    path = r'C:/Users/xxxxx/Desktop/Python/Enacom/Json/' + archivo
     with open(path, 'w') as f:
         json.dump(respuesta_ds, f)
